@@ -1,9 +1,9 @@
 /* @preserve
- * Leaflet 1.6.0, a JS library for interactive maps. http://leafletjs.com
+ * Leaflet 1.6.0+v1.6.0-patched.0c81bdf, a JS library for interactive maps. http://leafletjs.com
  * (c) 2010-2019 Vladimir Agafonkin, (c) 2010-2011 CloudMade
  */
 
-var version = "1.6.0";
+var version = "1.6.0+v1.6.0-patched.0c81bdf9";
 
 /*
  * @namespace Util
@@ -5876,7 +5876,7 @@ var Draggable = Evented.extend({
 
 		if (hasClass(this._element, 'leaflet-zoom-anim')) { return; }
 
-		if (Draggable._dragging || e.shiftKey || ((e.which !== 1) && (e.button !== 1) && !e.touches)) { return; }
+		if (Draggable._dragging || ((e.which !== 1) && (e.button !== 1) && !e.touches)) { return; }
 		Draggable._dragging = this;  // Prevent dragging multiple objects at once.
 
 		if (this._preventOutline) {
